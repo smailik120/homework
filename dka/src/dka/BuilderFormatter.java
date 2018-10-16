@@ -8,7 +8,7 @@ import java.util.Set;
 
 public class BuilderFormatter{
 private Automat<Character, String> automat;
-static int p = 0;
+static int spaceCounter = 0;
 public BuilderFormatter() {
 	build();
 }
@@ -55,12 +55,11 @@ public void build() {
     String q0="tabulation1";
     Map<Pair<Character, String>, Pair<Character, String>> delta = new HashMap<>();
     Map<Pair<Character, String>, Action<Character>> action = new HashMap<>();
-    for(int i = 1; i < 1000; i++)
-    {
+    int figureCuounter = 1000;
+    for(int i = 1; i < figureCuounter; i++) {
     	Q.add("tabulation" + Integer.toString(i));
     }
-    for(int i = 1; i < 999; i++)
-    {
+    for(int i = 1; i < figureCuounter - 1; i++) {
     	delta.put(new Pair<Character, String>('a', "tabulation" + Integer.toString(i)), new Pair<Character,String>('a', "tabulation" + Integer.toString(i)));
     	delta.put(new Pair<Character, String>('b', "tabulation" + Integer.toString(i)), new Pair<Character,String>('b', "tabulation" + Integer.toString(i)));
     	delta.put(new Pair<Character, String>('f', "tabulation" + Integer.toString(i)), new Pair<Character,String>('f', "tabulation" + Integer.toString(i)));
@@ -73,9 +72,9 @@ public void build() {
         Action<Character> act = new Action<Character>() {
 			@Override
 			public void action(List<Character> list) {
-				p += 4;
+				spaceCounter += 4;
 				list.add('\n');
-				for(int j = 1; j <= p  ; j++) {
+				for(int j = 1; j <= spaceCounter  ; j++) {
 					list.add(' ');
 				}
 			}
@@ -84,7 +83,7 @@ public void build() {
         Action<Character> up = new Action<Character>() {
 			@Override
 			public void action(List<Character> list) {
-				for(int j = 1; j <= p  ; j++) {
+				for(int j = 1; j <= spaceCounter  ; j++) {
 					list.add(' ');
 				}
 			}
@@ -94,7 +93,7 @@ public void build() {
 			@Override
 			public void action(List<Character> list) {
 				list.add('}');
-				p = p - 4;
+				spaceCounter = spaceCounter - 4;
 			}
         };
         
