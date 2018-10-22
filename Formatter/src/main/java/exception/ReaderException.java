@@ -1,7 +1,7 @@
 package exception;
 
 /**
- * Exception.
+ * Read Exception.
  */
 public class ReaderException extends Exception {
     /**

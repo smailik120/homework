@@ -1,6 +1,6 @@
 package exception;
 /**
- * Exception.
+ * Write Exception.
  */
 public class WriterException extends Exception {
     /**

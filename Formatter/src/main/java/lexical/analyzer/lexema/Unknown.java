@@ -1,14 +1,24 @@
-package LexicalAnalyzer;
+package lexical.analyzer.lexema;
 
-import WorkWithFiles.WriterToFile;
+import formatter.core.IWriter;
+import lexical.analyzer.FormatterAnalyzer;
 import exception.WriterException;
-
+/**
+ * Class for description symbols that not contains in alphabetical
+ */
 public class Unknown extends Lexema implements Action {
-    public Unknown(char symbol) {
+    /**
+     *
+     * @param symbol char.
+     */
+    public Unknown(final char symbol) {
         super(symbol);
     }
-
-    public void action(WriterToFile writer) throws WriterException {
+    /**
+     * @param writer WriterToFile.
+     * @throws WriterException exception.
+     */
+    public void action(final IWriter writer) throws WriterException {
         if (FormatterAnalyzer.getAnalyzer().getState().equals("semicolon")) {
             writer.writeChar('\r');
             writer.writeChar('\n');

@@ -1,4 +1,4 @@
-package WorkWithFiles;
+package work.with.files;
 
 import exception.ReaderException;
 import formatter.core.IReader;
@@ -7,7 +7,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-
+/**
+ * Realization interface IReader for file reading
+ */
 public class ReaderOfFile implements IReader<Character> {
     private final BufferedReader input;
     /**
