@@ -48,6 +48,7 @@ public final class FormatterAnalyzer extends Analyzer {
     public void work(final ReaderOfFile reader, final WriterToFile writer) throws ReaderException, WriterException, IOException {
         reader.readLexeme();
         while (reader.hasChars()) {
+            System.out.println(FormatterAnalyzer.getAnalyzer().getState());
             char current = reader.readLexeme();
             if (getMap().containsKey(current)) {
                 getMap().get(current).action(writer);

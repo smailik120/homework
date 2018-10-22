@@ -36,6 +36,9 @@ public class Unknown extends Lexema implements Action {
                 writer.writeChar(' ');
             }
         }
+        if (FormatterAnalyzer.getAnalyzer().getState().equals("space")) {
+            writer.writeChar(' ');
+        }
         writer.writeChar(getSymbol());
         FormatterAnalyzer.getAnalyzer().setState("symbol");
     }

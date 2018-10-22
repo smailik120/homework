@@ -38,4 +38,15 @@ class FormatterAnalyzerTest {
         analyzer.work(stringReader, stringWriter);
         assertTrue("{\r\n    {\r\n        s\r\n    }\r\n}".equals(output.toString()));
     }
+
+    @Test
+    void workForStringThird() throws ReaderException, WriterException, IOException {
+        FormatterAnalyzer analyzer = FormatterAnalyzer.getAnalyzer();
+        StringBuilder input = new StringBuilder("{ s t }");
+        ReaderOfString stringReader = new ReaderOfString(input);
+        StringBuilder output = new StringBuilder();
+        WriterToString stringWriter = new WriterToString(output);
+        analyzer.work(stringReader, stringWriter);
+        assertTrue("{\r\n    s t\r\n}".equals(output.toString()));
+    }
 }

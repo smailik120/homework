@@ -21,7 +21,6 @@ public class Space extends Lexema implements Action {
     public void action(final IWriter writer) throws WriterException {
         String state = FormatterAnalyzer.getAnalyzer().getState();
         if (state.equals("symbol")) {
-            writer.writeChar(' ');
             FormatterAnalyzer.getAnalyzer().setState("space");
         }
     }

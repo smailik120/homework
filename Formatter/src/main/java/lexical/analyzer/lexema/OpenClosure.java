@@ -24,7 +24,7 @@ public class OpenClosure extends Lexema implements Action {
             if (formatterAnalyzer.getState().equals("symbol")) {
                 writer.writeChar(' ');
             }
-            if (formatterAnalyzer.getState().equals("space")) {
+            if(FormatterAnalyzer.getAnalyzer().getState().equals("space")) {
                 writer.writeChar(getSymbol());
                 formatterAnalyzer.setSpaceCounter(formatterAnalyzer.getSpaceCounter() + formatterAnalyzer.getSpaces());
             }
