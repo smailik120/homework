@@ -13,7 +13,7 @@ import java.io.IOException;
 public class ReaderOfFile implements IReader<Character> {
     private final BufferedReader input;
     /**
-     *
+     * constructor
      * @param input filename.
      * @throws FileNotFoundException exception.
      */
@@ -21,7 +21,7 @@ public class ReaderOfFile implements IReader<Character> {
         this.input = new BufferedReader(new FileReader(input));
     }
     /**
-     *
+     * method that read symbol of stream
      * @return char.
      * @throws ReaderException exception.
      */
@@ -35,14 +35,14 @@ public class ReaderOfFile implements IReader<Character> {
         return (char) current;
     }
     /**
-     *
+     * close stream
      * @throws IOException exception.
      */
     public void close() throws IOException {
         this.input.close();
     }
         /**
-         *
+         * check that read must continue
          * @return boolean.
          * @throws ReaderException exception.
          */

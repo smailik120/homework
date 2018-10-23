@@ -12,7 +12,7 @@ public class ReaderOfString implements IReader<Character> {
      */
     private int pos = 0;
     /**
-     * string.
+     * StringBuilder.
      */
     private StringBuilder input;
 
@@ -25,7 +25,7 @@ public class ReaderOfString implements IReader<Character> {
     }
 
     /**
-     *
+     * check that read must continue
      * @return boolean.
      * @throws ReaderException exception.
      */
@@ -34,7 +34,7 @@ public class ReaderOfString implements IReader<Character> {
     }
 
     /**
-     *  c.
+     *  read symbol
      * @return char,
      * @throws ReaderException exception.
      */

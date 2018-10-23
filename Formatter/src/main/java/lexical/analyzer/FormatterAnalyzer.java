@@ -38,7 +38,7 @@ public final class FormatterAnalyzer extends Analyzer {
         getMap().put(';', new Semicolon(';'));
     }
     /**
-     * function make work for formatter analyzer
+     * function make work for formatter analyzer with files
      * @param reader ReaderOfFile.
      * @param writer wruterToFile.
      * @throws ReaderException exception.
@@ -61,7 +61,7 @@ public final class FormatterAnalyzer extends Analyzer {
         writer.close();
     }
     /**
-     * function make work for formatter analyzer
+     * function make work for formatter analyzer with strings
      * @param reader ReaderOfString.
      * @param writer WriterToString.
      * @throws ReaderException exception.

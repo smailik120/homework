@@ -12,6 +12,7 @@ public final class Main {
 
     }
     /**
+     * main function
      * @param args String[].
      * @throws IOException exception.
      * @throws ReaderException exception.

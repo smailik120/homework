@@ -8,13 +8,14 @@ import exception.WriterException;
  */
 public class Unknown extends Lexema implements Action {
     /**
-     *
+     * constructor
      * @param symbol char.
      */
     public Unknown(final char symbol) {
         super(symbol);
     }
     /**
+     * realization method action for symbol that not contains in alphabetical in interface Action make action leaning on previous symbol
      * @param writer WriterToFile.
      * @throws WriterException exception.
      */

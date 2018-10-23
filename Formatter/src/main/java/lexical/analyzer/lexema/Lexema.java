@@ -5,26 +5,19 @@ import exception.WriterException;
  * Class for description words of our language
  */
 public class Lexema implements Action {
+    private char symbol;
     /**
+     * constructor
      * @param symbol char.
      */
     public Lexema(final char symbol) {
         this.symbol = symbol;
     }
-
-    private char symbol;
-    /**
-     * @param lexema Lexema.
-     * @return boolean.
-     */
-    public boolean equals(final Lexema lexema) {
-        return symbol == lexema.getSymbol();
-    }
-
     public char getSymbol() {
         return symbol;
     }
     /**
+     * get view this lexem
      * @param writer WriterToFile.
      * @throws WriterException exception.
      */

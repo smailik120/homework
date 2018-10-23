@@ -23,7 +23,7 @@ public interface IReader<T> {
     void close() throws IOException, ReaderException;
 
     /**
-     *
+     * check that read must continue
      * @return boolean.
      * @throws ReaderException exception.
      */

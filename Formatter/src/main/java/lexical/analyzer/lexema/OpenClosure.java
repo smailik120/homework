@@ -8,14 +8,14 @@ import exception.WriterException;
  */
 public class OpenClosure extends Lexema implements Action {
     /**
-     *
+     * constructor
      * @param symbol char.
      */
     public OpenClosure(final char symbol) {
         super(symbol);
     }
     /**
-     *
+     * realization method action for { in interface Action make action leaning on previous symbol
      * @param writer WriterToFile.
      */
     public void action(final IWriter writer) {
@@ -24,7 +24,7 @@ public class OpenClosure extends Lexema implements Action {
             if (formatterAnalyzer.getState().equals("symbol")) {
                 writer.writeChar(' ');
             }
-            if(FormatterAnalyzer.getAnalyzer().getState().equals("space")) {
+            if (FormatterAnalyzer.getAnalyzer().getState().equals("space")) {
                 writer.writeChar(getSymbol());
                 formatterAnalyzer.setSpaceCounter(formatterAnalyzer.getSpaceCounter() + formatterAnalyzer.getSpaces());
             }

@@ -10,14 +10,14 @@ public class WriterToString implements IWriter<Character> {
     private StringBuilder output;
 
     /**
-     *
+     * method for view StringBuilder like String
      * @return string.
      */
     public final String toString() {
         return output.toString();
     }
 
-    /**
+    /** write symbol to string
      * @param output StringBuilder
      */
     public WriterToString(final StringBuilder output) {
@@ -25,7 +25,7 @@ public class WriterToString implements IWriter<Character> {
     }
 
     /**
-     *
+     * write symbol to output stream
      * @param character string.
      */
     public final void writeChar(final Character character) {

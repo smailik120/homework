@@ -10,7 +10,7 @@ import java.io.IOException;
 public class WriterToFile implements IWriter<Character> {
     private final BufferedWriter output;
     /**
-     *
+     * constructor
      * @param output String.
      * @throws IOException exception.
      */
@@ -18,7 +18,7 @@ public class WriterToFile implements IWriter<Character> {
         this.output = new BufferedWriter(new FileWriter(output));
     }
     /**
-     *
+     * write char to output stream
      * @param current Character.
      * @throws WriterException exception.
      */

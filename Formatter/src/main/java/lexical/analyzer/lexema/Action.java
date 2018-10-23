@@ -7,6 +7,7 @@ import exception.WriterException;
  */
 public interface Action {
     /**
+     * action that write to output stream
      * @param writer WriterToFile.
      * @throws WriterException exception.
      */

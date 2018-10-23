@@ -2,23 +2,23 @@ package lexical.analyzer;
 
 import exception.ReaderException;
 import exception.WriterException;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 import work.with.files.ReaderOfString;
 import work.with.files.WriterToString;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.*;
 
-class FormatterAnalyzerTest {
-    @BeforeEach
-    public void Before() {
+public class FormatterAnalyzerTest {
+
+    @Before
+    public void before() {
         FormatterAnalyzer.getAnalyzer().setState("space");
     }
     @Test
-    void workForStringFirst() throws ReaderException, WriterException, IOException {
+    public void workForStringFirst() throws ReaderException, WriterException, IOException {
         FormatterAnalyzer analyzer = FormatterAnalyzer.getAnalyzer();
         StringBuilder input = new StringBuilder("{{}}");
         ReaderOfString stringReader = new ReaderOfString(input);
@@ -29,7 +29,7 @@ class FormatterAnalyzerTest {
         FormatterAnalyzer.getAnalyzer().setState("space");
     }
     @Test
-    void workForStringSecond() throws ReaderException, WriterException, IOException {
+    public void workForStringSecond() throws ReaderException, WriterException, IOException {
         FormatterAnalyzer analyzer = FormatterAnalyzer.getAnalyzer();
         StringBuilder input = new StringBuilder("{{\r\n     s}}");
         ReaderOfString stringReader = new ReaderOfString(input);
@@ -40,7 +40,7 @@ class FormatterAnalyzerTest {
     }
 
     @Test
-    void workForStringThird() throws ReaderException, WriterException, IOException {
+    public void workForStringThird() throws ReaderException, WriterException, IOException {
         FormatterAnalyzer analyzer = FormatterAnalyzer.getAnalyzer();
         StringBuilder input = new StringBuilder("{ s t }");
         ReaderOfString stringReader = new ReaderOfString(input);

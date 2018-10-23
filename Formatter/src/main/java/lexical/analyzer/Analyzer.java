@@ -23,7 +23,7 @@ public abstract class Analyzer {
      */
     abstract void init();
     /**
-     * function make work for our analyzer
+     * function make work for our analyzer with files
      * @param reader ReaderOfFile.
      * @param writer WriterToFile.
      * @throws ReaderException exception.
@@ -32,7 +32,7 @@ public abstract class Analyzer {
      */
     abstract void work(ReaderOfFile reader, WriterToFile writer) throws ReaderException, WriterException, IOException;
     /**
-     * function make work for our analyzer
+     * function make work for our analyzer with strings
      * @param reader ReaderOfString.
      * @param writer WriterToString.
      * @throws ReaderException exception.
